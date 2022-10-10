@@ -5,8 +5,8 @@ import (
 )
 
 func main() {
-	// basics.Variables()
-	// basics.Primitives()
-	// basics.Arrays()
+	basics.Variables()
+	basics.Primitives()
+	basics.Arrays()
 	basics.Slices()
 }
