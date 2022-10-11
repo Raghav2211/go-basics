@@ -24,6 +24,8 @@ func main() {
 		basics.Maps()
 	} else if strings.EqualFold(*runType, "Struct") {
 		basics.Struct()
+	} else if strings.EqualFold(*runType, "Controls") {
+		basics.ControlStatements()
 	} else {
 		err := errors.New("runtype not found")
 		log.Fatal(err)
