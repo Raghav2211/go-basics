@@ -43,4 +43,20 @@ func Maps() {
 	fmt.Println("is Student2 present?", ok4)
 	fmt.Println("Length of studentGrade db ", len(studentGrades))
 
+	// multiple map assignment use same underline data
+	map1 := map[string]int{
+		"key1": 1,
+		"key2": 2,
+		"key3": 3,
+	}
+	map2 := map1
+	fmt.Println("Map1 : ", map1)
+	fmt.Println("Map2 :", map2)
+	map2["key4"] = 4 // append
+	fmt.Println("After append in map2 , Map1: ", map1)
+	fmt.Println("After append in map2 , Map2: ", map2)
+	delete(map1, "key1")
+	fmt.Println("After delete[key1] in map1 , Map1: ", map1)
+	fmt.Println("After delete[key1] in map1 , Map2: ", map2)
+
 }
