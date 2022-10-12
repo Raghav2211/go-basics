@@ -6,3 +6,4 @@
 - [Maps](./basics/maps.go)
 - [Structs](./basics/structs.go)
 - [ControlStatements](./basics/control_statements.go)
+- [Loop](./basics/loop.go)
