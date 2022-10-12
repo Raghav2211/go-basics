@@ -28,6 +28,10 @@ func main() {
 		basics.ControlStatements()
 	} else if strings.EqualFold(*runType, "Loop") {
 		basics.Loop()
+	} else if strings.EqualFold(*runType, "Defer") {
+		basics.Defer()
+	} else if strings.EqualFold(*runType, "Panic") {
+		basics.PanicAndRecover()
 	} else if strings.EqualFold(*runType, "All") {
 		all()
 	} else {
@@ -44,4 +48,6 @@ func all() {
 	basics.Struct()
 	basics.ControlStatements()
 	basics.Loop()
+	basics.Defer()
+	basics.PanicAndRecover()
 }
