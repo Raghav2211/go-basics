@@ -3,6 +3,8 @@ package basics
 import "fmt"
 
 func Maps() {
+	fmt.Println("***************************Maps Section Start***************************")
+
 	// declaration
 	var emptyMap = map[string]int{}
 	emptyMap2 := map[string]int{}
@@ -58,5 +60,7 @@ func Maps() {
 	delete(map1, "key1")
 	fmt.Println("After delete[key1] in map1 , Map1: ", map1)
 	fmt.Println("After delete[key1] in map1 , Map2: ", map2)
+
+	fmt.Println("***************************Primitives Section End***************************")
 
 }

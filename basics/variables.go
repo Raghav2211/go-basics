@@ -20,7 +20,7 @@ var (
 var I int32 = 4 // GLOBAL variable
 
 func Variables() {
-
+	fmt.Println("***************************Variables Section Start***************************")
 	// local variables
 	var i int32 = 35
 	j := 36
@@ -43,5 +43,7 @@ func Variables() {
 
 	var stringToIntConvert string = strconv.Itoa(int(intVar))
 	fmt.Printf("Local variable %v , %T\n", stringToIntConvert, stringToIntConvert)
+
+	fmt.Println("***************************Variables Section End***************************")
 
 }

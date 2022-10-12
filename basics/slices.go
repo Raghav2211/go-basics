@@ -3,6 +3,8 @@ package basics
 import "fmt"
 
 func Slices() {
+	fmt.Println("***************************Slices Section Start***************************")
+
 	a := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 	fmt.Printf("a %v\n", a)
 	fmt.Printf("a Length %v\n", len(a))
@@ -32,5 +34,7 @@ func Slices() {
 	fmt.Printf("f %v\n", f)
 	fmt.Printf("f Length %v\n", len(f))
 	fmt.Printf("f Capacity %v\n", cap(f))
+
+	fmt.Println("***************************Slices Section End***************************")
 
 }

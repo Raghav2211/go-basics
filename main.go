@@ -26,8 +26,22 @@ func main() {
 		basics.Struct()
 	} else if strings.EqualFold(*runType, "Controls") {
 		basics.ControlStatements()
+	} else if strings.EqualFold(*runType, "Loop") {
+		basics.Loop()
+	} else if strings.EqualFold(*runType, "All") {
+		all()
 	} else {
 		err := errors.New("runtype not found")
 		log.Fatal(err)
 	}
+}
+func all() {
+	basics.Variables()
+	basics.Primitives()
+	basics.Arrays()
+	basics.Slices()
+	basics.Maps()
+	basics.Struct()
+	basics.ControlStatements()
+	basics.Loop()
 }

@@ -5,6 +5,8 @@ import (
 )
 
 func Primitives() {
+	fmt.Println("***************************Primitives Section Start***************************")
+
 	fmt.Println("--------------BOOLEAN------------")
 	// boolean
 	var boolVar bool = true
@@ -90,5 +92,7 @@ func Primitives() {
 
 	var rune rune = 'C'
 	fmt.Printf("%v %T\n", rune, rune)
+
+	fmt.Println("***************************Primitives Section End***************************")
 
 }

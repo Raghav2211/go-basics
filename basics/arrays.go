@@ -4,6 +4,8 @@ import "fmt"
 
 // fixed in size cannot grow after initilaization
 func Arrays() {
+	fmt.Println("***************************Arrays Section Start***************************")
+
 	// declaration styles
 	grades := [3]int{1, 2, 3}
 	fmt.Printf("Grades %v\n", grades)
@@ -41,5 +43,7 @@ func Arrays() {
 	fmt.Printf("%v\n", c)
 	fmt.Printf("%v\n", d)
 	fmt.Printf("%v\n", d[0])
+
+	fmt.Println("***************************Arrays Section End***************************")
 
 }

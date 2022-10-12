@@ -9,6 +9,8 @@ type Author struct {
 }
 
 func Struct() {
+	fmt.Println("***************************Structs Section Start***************************")
+
 	author := Author{
 		id:        "1",
 		firstName: "Raghav",
@@ -40,5 +42,7 @@ func Struct() {
 	refAnonymousAuthor.firstName = "Raghav2"
 	fmt.Println("[After update using pointer assignment]Anonymous Author info", anonymousAuthor)
 	fmt.Println("[After update using pointer assignment]Reference Anonymous Author info", refAnonymousAuthor)
+
+	fmt.Println("***************************Structs Section End***************************")
 
 }

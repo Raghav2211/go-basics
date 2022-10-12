@@ -7,6 +7,7 @@ import (
 )
 
 func ControlStatements() {
+	fmt.Println("***************************Control statements Section Start***************************")
 
 	if true {
 		fmt.Println("Always execute")
@@ -98,6 +99,8 @@ func ControlStatements() {
 		fmt.Println("i is less than to 20") // this also print becuase of fallthrough
 
 	}
+
+	fmt.Println("***************************Control statements Section End***************************")
 
 }
 
