@@ -23,7 +23,7 @@ func Loop() {
 		fmt.Println("[Initialize value in main scope] i is ", i)
 	}
 	fmt.Println()
-	// only comparison operator
+	// only comparison operator (can compare with while loop)
 	i = 0
 	for i < 10 {
 		fmt.Println("[Only comparison operator] i is ", i)
