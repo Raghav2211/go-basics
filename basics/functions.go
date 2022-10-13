@@ -12,14 +12,31 @@ func Function() {
 	// calling a function
 	helloWorld()
 	println()
+
+	// call anonymous function implicitly
+	func() {
+		fmt.Println("Hello world in anonymous function & call implicitly")
+	}()
+	println()
+
+	// call anonymous function explicitly
+	anonymous := func(to string) {
+		fmt.Println("Hello", to, "in anonymous function & call explicitly")
+	}
+	anonymous("Raghav")
+	println()
+
 	args(1, 2, 3, 4)
 	println()
+
 	// calling a function with parameters
 	addNumbers(2, 3)
 	println()
+
 	// calling function with same parameter does not need to specify each variable type
 	addNumbersWithoutDefineTypeofA(2, 3)
 	println()
+
 	//passing parameters by value
 	name := "Raghav"
 	passingParamterByValues(name)
@@ -49,6 +66,7 @@ func Function() {
 	updateSlice(&grades)
 	fmt.Println("after update studentGrades in downstream function(updateSlice) :", grades)
 	println()
+
 	// named return function
 	nameWithUpperCase := namedResultFunction(name)
 	fmt.Println("return uppercase string from named return function :", nameWithUpperCase)
@@ -59,7 +77,17 @@ func Function() {
 	fmt.Println("Return all form of name  with multiple return function [", firstname, middlename, lastname, "]")
 	firstname, middlename, lastname = divideFullNameIntoSubname("Raghav")
 	fmt.Println("Return all form of name  with multiple return function [", firstname, middlename, lastname, "]")
-	fmt.Println()
+	println()
+
+	// methods
+	authorObj := author{
+		"123",
+		"Raghav",
+		"Joshi",
+	}
+	authorObj.printAuthorInfo()
+	println()
+
 	println("***************************Function Section End***************************")
 }
 
@@ -112,4 +140,7 @@ func divideFullNameIntoSubname(fullname string) (string, string, string) {
 		return nameArray[0], "", nameArray[1]
 	}
 	return nameArray[0], nameArray[1], nameArray[2]
+}
+func (authorInfo author) printAuthorInfo() {
+	fmt.Println("Author info :", authorInfo.firstName, "-", authorInfo.lastName)
 }
