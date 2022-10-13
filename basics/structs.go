@@ -2,7 +2,7 @@ package basics
 
 import "fmt"
 
-type Author struct {
+type author struct {
 	id        string
 	firstName string
 	lastName  string
@@ -11,7 +11,7 @@ type Author struct {
 func Struct() {
 	fmt.Println("***************************Structs Section Start***************************")
 
-	author := Author{
+	author := author{
 		id:        "1",
 		firstName: "Raghav",
 		lastName:  "Joshi",

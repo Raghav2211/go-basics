@@ -10,29 +10,31 @@ import (
 
 func main() {
 
-	runType := flag.String("runtype", "Variables", "Which basics package you want run")
+	run := flag.String("run", "Variables", "Which basics package you want run")
 	flag.Parse()
-	if strings.EqualFold(*runType, "Variables") {
+	if strings.EqualFold(*run, "Variables") {
 		basics.Variables()
-	} else if strings.EqualFold(*runType, "Primitives") {
+	} else if strings.EqualFold(*run, "Primitives") {
 		basics.Primitives()
-	} else if strings.EqualFold(*runType, "Arrays") {
+	} else if strings.EqualFold(*run, "Arrays") {
 		basics.Arrays()
-	} else if strings.EqualFold(*runType, "Slices") {
+	} else if strings.EqualFold(*run, "Slices") {
 		basics.Slices()
-	} else if strings.EqualFold(*runType, "Maps") {
+	} else if strings.EqualFold(*run, "Maps") {
 		basics.Maps()
-	} else if strings.EqualFold(*runType, "Struct") {
+	} else if strings.EqualFold(*run, "Struct") {
 		basics.Struct()
-	} else if strings.EqualFold(*runType, "Controls") {
+	} else if strings.EqualFold(*run, "Controls") {
 		basics.ControlStatements()
-	} else if strings.EqualFold(*runType, "Loop") {
+	} else if strings.EqualFold(*run, "Loop") {
 		basics.Loop()
-	} else if strings.EqualFold(*runType, "Defer") {
+	} else if strings.EqualFold(*run, "Defer") {
 		basics.Defer()
-	} else if strings.EqualFold(*runType, "Panic") {
+	} else if strings.EqualFold(*run, "Panic") {
 		basics.PanicAndRecover()
-	} else if strings.EqualFold(*runType, "All") {
+	} else if strings.EqualFold(*run, "Pointer") {
+		basics.Pointers()
+	} else if strings.EqualFold(*run, "All") {
 		all()
 	} else {
 		err := errors.New("runtype not found")

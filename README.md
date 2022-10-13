@@ -7,3 +7,6 @@
 - [Structs](./basics/structs.go)
 - [ControlStatements](./basics/control_statements.go)
 - [Loop](./basics/loop.go)
+- [Defer](./basics/defer.go)
+- [Paninc & Recover](./basics/panic_recover.go)
+- [Pointers](./basics/pointers.go)
