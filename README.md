@@ -1,4 +1,6 @@
 # go-basics
+
+## Modules
 - [Variables](./basics/variables.go)
 - [Primitives](./basics/primitives.go)
 - [Arrays](./basics/arrays.go)
@@ -10,3 +12,7 @@
 - [Defer](./basics/defer.go)
 - [Paninc & Recover](./basics/panic_recover.go)
 - [Pointers](./basics/pointers.go)
+- [Functions](./basics/functions.go)
+
+## Run 
+go run main.go -run={module}

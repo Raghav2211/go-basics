@@ -34,6 +34,8 @@ func main() {
 		basics.PanicAndRecover()
 	} else if strings.EqualFold(*run, "Pointer") {
 		basics.Pointers()
+	} else if strings.EqualFold(*run, "Function") {
+		basics.Function()
 	} else if strings.EqualFold(*run, "All") {
 		all()
 	} else {
