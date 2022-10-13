@@ -1,6 +1,7 @@
 package basics
 
 import (
+	"errors"
 	"fmt"
 	"strings"
 
@@ -88,6 +89,21 @@ func Function() {
 	authorObj.printAuthorInfo()
 	println()
 
+	// value or error
+	ans, err := valueOrError(5, 3)
+	if err != nil {
+		fmt.Println("error :", err)
+	} else {
+		fmt.Println("Answer is :", ans)
+	}
+
+	ans, err = valueOrError(5, 0)
+	if err != nil {
+		fmt.Println("error :", err)
+	} else {
+		fmt.Println("Answer is :", ans)
+	}
+
 	println("***************************Function Section End***************************")
 }
 
@@ -143,4 +159,11 @@ func divideFullNameIntoSubname(fullname string) (string, string, string) {
 }
 func (authorInfo author) printAuthorInfo() {
 	fmt.Println("Author info :", authorInfo.firstName, "-", authorInfo.lastName)
+}
+
+func valueOrError(dividend int, divisor int) (int, error) {
+	if divisor == 0 {
+		return -999, errors.New("Number cannot divide dividend zero")
+	}
+	return dividend / divisor, nil
 }
