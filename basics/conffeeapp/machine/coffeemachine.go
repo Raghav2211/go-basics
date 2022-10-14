@@ -34,21 +34,21 @@ type PremiumCoffeeMachine struct {
 
 func (basicCoffeeMachine BasicCoffeeMachine) BrewCoffee() string {
 	grinder := grinder{}
-
 	grinder.grind(basicCoffeeMachine.Bean)
-	return fmt.Sprintf("filter coffee ready !!")
+
+	return "filter coffee ready !!"
 }
 
 func (premiumCoffeeMachine PremiumCoffeeMachine) BrewEspresso() string {
-	return fmt.Sprintf("espresso coffee ready !!")
+	return "espresso coffee ready !!"
 }
 
 func (premiumCoffeeMachine PremiumCoffeeMachine) BrewCoffee() string {
 	grinder := grinder{}
-
 	grinder.grind(premiumCoffeeMachine.Bean)
+
 	if premiumCoffeeMachine.Bean.CoffeeType == BASIC {
-		return fmt.Sprintf("filter coffee ready !!")
+		return "filter coffee ready !!"
 	}
 	return premiumCoffeeMachine.BrewEspresso()
 }
