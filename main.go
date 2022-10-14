@@ -56,4 +56,7 @@ func all() {
 	basics.Loop()
 	basics.Defer()
 	basics.PanicAndRecover()
+	basics.Pointers()
+	basics.Function()
+	basics.Interface()
 }

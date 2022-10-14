@@ -1,32 +1,29 @@
 package basics
 
-import "fmt"
-
-type Writer interface {
-	write()
-}
-
-type ConsoleWriter struct {
-}
-type FileWriter struct {
-}
+import (
+	coffeeApp "basics/basics/conffeeapp"
+	coffeemachine "basics/basics/conffeeapp/machine"
+	"fmt"
+)
 
 func Interface() {
-	consoleWriter := ConsoleWriter{}
-	write(consoleWriter)
+	fmt.Println("***************************Interface Section Start***************************")
+	coffeeApp := coffeeApp.CoffeeApp{}
 
-	fileWriter := FileWriter{}
-	write(fileWriter)
-}
+	// create basic coffeeMachine
+	basicCoffeeBean := coffeemachine.CoffeeBean{Quantity: 100, CoffeeType: coffeemachine.BASIC}
+	basicCoffeeMachine := coffeemachine.BasicCoffeeMachine{Bean: basicCoffeeBean}
+	// create premium coffee machine for basic type
+	premiumBasicCoffeeBean := coffeemachine.CoffeeBean{Quantity: 200, CoffeeType: coffeemachine.BASIC}
+	premiumBasicCoffeeMachine := coffeemachine.PremiumCoffeeMachine{Bean: premiumBasicCoffeeBean}
+	// create premium coffee machine for espresso type
+	premiumEspressoCoffeeBean := coffeemachine.CoffeeBean{Quantity: 1000, CoffeeType: coffeemachine.ESPRESSO}
+	premiumEspressoCoffeeMachine := coffeemachine.PremiumCoffeeMachine{Bean: premiumEspressoCoffeeBean}
 
-func write(writer Writer) {
-	writer.write()
-}
-
-func (consoleWriter ConsoleWriter) write() {
-	fmt.Println("Write content using consoleWriter")
-}
-
-func (fileWriter FileWriter) write() {
-	fmt.Println("Write content using fileWriter")
+	coffeeMachines := []coffeemachine.CoffeeMachine{basicCoffeeMachine, premiumBasicCoffeeMachine, premiumEspressoCoffeeMachine}
+	for _, coffeeMachine := range coffeeMachines {
+		coffeeApp.PrepareCoffee(coffeeMachine)
+		println()
+	}
+	fmt.Println("***************************Interface Section End***************************")
 }
