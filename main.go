@@ -36,6 +36,8 @@ func main() {
 		basics.Pointers()
 	} else if strings.EqualFold(*run, "Function") {
 		basics.Function()
+	} else if strings.EqualFold(*run, "Interface") {
+		basics.Interface()
 	} else if strings.EqualFold(*run, "All") {
 		all()
 	} else {
