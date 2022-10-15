@@ -2,19 +2,13 @@ package basics
 
 import "fmt"
 
-type author struct {
-	id        string
-	firstName string
-	lastName  string
-}
-
 func Struct() {
 	fmt.Println("***************************Structs Section Start***************************")
 
-	author := author{
-		id:        "1",
-		firstName: "Raghav",
-		lastName:  "Joshi",
+	author := Author{
+		Id:        "1",
+		FirstName: "Raghav",
+		LastName:  "Joshi",
 	}
 
 	fmt.Println("Author info: ", author)

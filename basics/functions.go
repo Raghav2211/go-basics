@@ -84,12 +84,12 @@ func Function() {
 	println()
 
 	// methods
-	authorObj := author{
+	authorObj := Author{
 		"123",
 		"Raghav",
 		"Joshi",
 	}
-	authorObj.printAuthorInfo()
+	authorObj.PrintAuthorName()
 	println()
 
 	// value or error
@@ -167,9 +167,6 @@ func divideFullNameIntoSubname(fullname string) (string, string, string) {
 		return nameArray[0], "", nameArray[1]
 	}
 	return nameArray[0], nameArray[1], nameArray[2]
-}
-func (authorInfo author) printAuthorInfo() {
-	fmt.Println("Author info :", authorInfo.firstName, "-", authorInfo.lastName)
 }
 
 func valueOrError(dividend int, divisor int) (int, error) {

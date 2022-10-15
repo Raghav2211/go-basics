@@ -23,7 +23,7 @@ func Variables() {
 	fmt.Println("***************************Variables Section Start***************************")
 	// local variables
 	var i int32 = 35
-	j := 36
+	j := 36 // := is walrus operator
 	fmt.Printf("[int]Local variable i %v , %T\n", i, i)
 	fmt.Printf("[int]Local variable j %v , %T\n", j, j)
 	fmt.Printf("[int]Package level variable K %v , %T\n", k, k)
