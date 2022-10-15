@@ -16,6 +16,7 @@ type struct2 struct {
 func Interface() {
 	fmt.Println("***************************Interface Section Start***************************")
 	// empty interface
+	// can use in type conversion , similar to market interface in java
 	var emptyInterface interface{}
 
 	emptyInterface = 12
@@ -54,6 +55,7 @@ func Interface() {
 		coffeeApp.PrepareCoffee(coffeeMachine)
 		println()
 	}
+
 	fmt.Println("***************************Interface Section End***************************")
 }
 

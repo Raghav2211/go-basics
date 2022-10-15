@@ -44,6 +44,9 @@ func Function() {
 	fmt.Println("Value in caller after function call : ", name)
 	println()
 
+	greet(greetFunc, "User !! , I'm called using pass a greet function into another function")
+	println()
+
 	// passing value using pointers
 	name = "Raghav"
 	passingParamterByPointer(&name)
@@ -127,6 +130,14 @@ func passingParamterByValues(name string) {
 	fmt.Println("Value recieved : ", name)
 	name = "Change"
 	fmt.Println("After Value change in callee : ", name)
+}
+
+func greet(greeter func(string) string, name string) {
+	fmt.Println(greeter(name))
+}
+
+func greetFunc(name string) string {
+	return "Hey " + name
 }
 
 func passingParamterByPointer(name *string) {
