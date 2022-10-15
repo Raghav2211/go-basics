@@ -4,12 +4,18 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+
+	"github.com/google/uuid"
 )
 
 type Author struct {
 	Id        string `json:"id"`
 	FirstName string `json:"fName"`
 	LastName  string `json:"lName"`
+}
+
+func newAuthor(firstName string, lastName string) Author {
+	return Author{uuid.New().String(), firstName, lastName}
 }
 
 func (author Author) String() string {
@@ -20,6 +26,6 @@ func (author Author) String() string {
 	return string(authorJSON)
 }
 
-func (author Author) PrintAuthorName() {
+func (author Author) printAuthorName() {
 	fmt.Println("Author Name :", author.FirstName, author.LastName)
 }

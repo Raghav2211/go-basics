@@ -89,7 +89,7 @@ func Function() {
 		"Raghav",
 		"Joshi",
 	}
-	authorObj.PrintAuthorName()
+	authorObj.printAuthorName()
 	println()
 
 	// value or error

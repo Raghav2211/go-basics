@@ -4,14 +4,20 @@ import "fmt"
 
 func Struct() {
 	fmt.Println("***************************Structs Section Start***************************")
+	println()
 
 	author := Author{
 		Id:        "1",
 		FirstName: "Raghav",
 		LastName:  "Joshi",
 	}
-
 	fmt.Println("Author info: ", author)
+	println()
+
+	// there are no build in construtor , so created a new function which works as constructor
+	author = newAuthor("Raghav", "Joshi")
+	fmt.Println("Author created using constructor : ", author)
+	println()
 
 	anonymousAuthor := struct {
 		id        string
@@ -19,6 +25,7 @@ func Struct() {
 		lastName  string
 	}{"1", "Raghav", "Joshi"}
 	fmt.Println("Anonymous Author info", anonymousAuthor)
+	println()
 
 	// struct assignment
 	anonymousAuthor2 := anonymousAuthor
@@ -28,6 +35,7 @@ func Struct() {
 
 	fmt.Println("[After update]Anonymous Author info", anonymousAuthor)
 	fmt.Println("[After update]Anonymous2 Author info", anonymousAuthor2)
+	println()
 
 	// struct assignment using pointer
 	refAnonymousAuthor := &anonymousAuthor
@@ -36,6 +44,7 @@ func Struct() {
 	refAnonymousAuthor.firstName = "Raghav2"
 	fmt.Println("[After update using pointer assignment]Anonymous Author info", anonymousAuthor)
 	fmt.Println("[After update using pointer assignment]Reference Anonymous Author info", refAnonymousAuthor)
+	println()
 
 	fmt.Println("***************************Structs Section End***************************")
 
