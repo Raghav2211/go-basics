@@ -13,6 +13,7 @@
 - [Paninc & Recover](./basics/panic_recover.go)
 - [Pointers](./basics/pointers.go)
 - [Functions](./basics/functions.go)
+- [Interface](./basics/interface.go)
 
 ## Run 
 go run main.go -run={module}
