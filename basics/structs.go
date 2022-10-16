@@ -1,22 +1,25 @@
 package basics
 
-import "fmt"
+import (
+	author "basics/basics/model"
+	"fmt"
+)
 
 func Struct() {
 	fmt.Println("***************************Structs Section Start***************************")
 	println()
 
-	author := Author{
+	authorObj := author.Author{
 		Id:        "1",
 		FirstName: "Raghav",
 		LastName:  "Joshi",
 	}
-	fmt.Println("Author info: ", author)
+	fmt.Println("Author info: ", authorObj)
 	println()
 
 	// there are no build in construtor , so created a new function which works as constructor
-	author = newAuthor("Raghav", "Joshi")
-	fmt.Println("Author created using constructor : ", author)
+	authorObj = author.NewAuthor("Raghav", "Joshi")
+	fmt.Println("Author created using constructor : ", authorObj)
 	println()
 
 	anonymousAuthor := struct {

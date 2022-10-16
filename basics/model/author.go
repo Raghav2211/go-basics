@@ -1,4 +1,4 @@
-package basics
+package model
 
 import (
 	"encoding/json"
@@ -14,7 +14,7 @@ type Author struct {
 	LastName  string `json:"lName"`
 }
 
-func newAuthor(firstName string, lastName string) Author {
+func NewAuthor(firstName string, lastName string) Author {
 	return Author{uuid.New().String(), firstName, lastName}
 }
 
@@ -26,6 +26,6 @@ func (author Author) String() string {
 	return string(authorJSON)
 }
 
-func (author Author) printAuthorName() {
+func (author Author) PrintAuthorName() {
 	fmt.Println("Author Name :", author.FirstName, author.LastName)
 }

@@ -1,6 +1,7 @@
 package basics
 
 import (
+	author "basics/basics/model"
 	"errors"
 	"fmt"
 	"strings"
@@ -84,12 +85,12 @@ func Function() {
 	println()
 
 	// methods
-	authorObj := Author{
+	authorObj := author.Author{
 		"123",
 		"Raghav",
 		"Joshi",
 	}
-	authorObj.printAuthorName()
+	authorObj.PrintAuthorName()
 	println()
 
 	// value or error
