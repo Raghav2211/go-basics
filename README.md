@@ -14,6 +14,6 @@
 - [Pointers](./basics/pointers.go)
 - [Functions](./basics/functions.go)
 - [Interface](./basics/interface.go)
-- [GoRoutine](./basics/goroutines.go)
+- [GoRoutine](./basics/goroutines/README.md)
 ## Run 
 go run main.go -run={module}
