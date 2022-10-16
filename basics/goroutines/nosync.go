@@ -5,28 +5,28 @@ import (
 	"sync"
 )
 
-var wrongSyncwg = sync.WaitGroup{}
+var noSyncwg = sync.WaitGroup{}
 
-var wrongSyncCounter int = 0
+var noSyncCounter int = 0
 
 func NoSync() {
 
 	for i := 0; i < 10; i++ {
-		wrongSyncwg.Add(2)
-		go greetCounterVar()
-		go incrementCounter()
+		noSyncwg.Add(2)
+		go noSyncgreetCounterVar()
+		go noSyncincrementCounter()
 
 	}
-	wrongSyncwg.Wait()
+	noSyncwg.Wait()
 
 }
 
-func greetCounterVar() {
-	fmt.Println("Hello counter ", wrongSyncCounter, "!!")
-	wrongSyncwg.Done()
+func noSyncgreetCounterVar() {
+	fmt.Println("Hello counter ", noSyncCounter, "!!")
+	noSyncwg.Done()
 }
 
-func incrementCounter() {
-	wrongSyncCounter++
-	wrongSyncwg.Done()
+func noSyncincrementCounter() {
+	noSyncCounter++
+	noSyncwg.Done()
 }

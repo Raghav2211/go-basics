@@ -8,12 +8,12 @@ import (
 var wg = sync.WaitGroup{}
 
 func GoRoutine() {
-	greetMainGoRountine("main thread")
+	greetGoRountine("main thread")
 	println()
 	//threads that are scheduled by a virtual machine (VM) instead of natively by the underlying operating system
 	// it create different stack
 	wg.Add(1)
-	go greetWithCustomGoRountine("Green thread")
+	go greetWithCustomGoRountine(greetGoRountine, "Green thread")
 
 	wg.Add(1)
 	// using annonymous function
@@ -54,12 +54,12 @@ func GoRoutine() {
 
 }
 
-func greetMainGoRountine(threadName string) {
+func greetGoRountine(threadName string) {
 	fmt.Println("Hello user using ,", threadName, "!!")
 }
 
-func greetWithCustomGoRountine(threadName string) {
-	fmt.Println("Hello user using ,", threadName, "!!")
+func greetWithCustomGoRountine(greetGoRoutine func(name string), name string) {
+	greetGoRoutine(name)
 	println()
 	wg.Done()
 }
