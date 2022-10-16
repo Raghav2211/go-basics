@@ -8,7 +8,7 @@ import (
 
 var wg = sync.WaitGroup{}
 
-func GoRoutine() {
+func Basic() {
 
 	fmt.Printf("No of OS threads %d", runtime.GOMAXPROCS(-1))
 	println()
