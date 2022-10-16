@@ -2,6 +2,7 @@ package main
 
 import (
 	"basics/basics"
+	goRoutine "basics/basics/goroutines"
 	"errors"
 	"flag"
 	"log"
@@ -11,7 +12,9 @@ import (
 func main() {
 
 	run := flag.String("run", "Variables", "Which basics package you want run")
+	routine := flag.String("routine", "Basic", "Which goroutine example you want to run")
 	flag.Parse()
+
 	if strings.EqualFold(*run, "Variables") {
 		basics.Variables()
 	} else if strings.EqualFold(*run, "Primitives") {
@@ -38,7 +41,9 @@ func main() {
 		basics.Function()
 	} else if strings.EqualFold(*run, "Interface") {
 		basics.Interface()
-	} else if strings.EqualFold(*run, "All") {
+	} else if strings.EqualFold(*run, "Gorountine") {
+		runGoRoutineExamples(*routine)
+	} else if strings.EqualFold(*run, "Go") {
 		all()
 	} else {
 		err := errors.New("runtype not found")
@@ -59,4 +64,17 @@ func all() {
 	basics.Pointers()
 	basics.Function()
 	basics.Interface()
+}
+
+func runGoRoutineExamples(routine string) {
+	if strings.EqualFold(routine, "Basic") {
+		goRoutine.GoRoutine()
+	} else if strings.EqualFold(routine, "NoSync") {
+		goRoutine.NoSync()
+	} else if strings.EqualFold(routine, "Mutex") {
+		goRoutine.SyncWithMutex()
+	} else {
+		err := errors.New("routine example not found")
+		log.Fatal(err)
+	}
 }
