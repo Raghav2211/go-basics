@@ -86,9 +86,9 @@ func Function() {
 
 	// methods
 	authorObj := author.Author{
-		"123",
-		"Raghav",
-		"Joshi",
+		Id:        "123",
+		FirstName: "Raghav",
+		LastName:  "Joshi",
 	}
 	authorObj.PrintAuthorName()
 	println()
