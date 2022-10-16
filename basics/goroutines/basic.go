@@ -2,12 +2,16 @@ package goroutines
 
 import (
 	"fmt"
+	"runtime"
 	"sync"
 )
 
 var wg = sync.WaitGroup{}
 
 func GoRoutine() {
+
+	fmt.Printf("No of OS threads %d", runtime.GOMAXPROCS(-1))
+	println()
 	greetGoRountine("main thread")
 	println()
 	//threads that are scheduled by a virtual machine (VM) instead of natively by the underlying operating system

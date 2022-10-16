@@ -15,8 +15,8 @@ func SyncWithMutex() {
 	// becuase if read happen twice and write happens ones then it'll read the same counter data twice
 	for i := 0; i < 10; i++ {
 		mutexWg.Add(2)
-		go mutexGreetCounterVarUsingLockUnlock(incrementCounter)
-		go mutexIncrementCounterUsingLockUnlock(greetCounter)
+		go mutexGreetCounterVarUsingLockUnlock(greetCounter)
+		go mutexIncrementCounterUsingLockUnlock(incrementCounter)
 	}
 	mutexWg.Wait()
 	println()
