@@ -22,6 +22,18 @@ func Struct() {
 	fmt.Println("Author created using constructor : ", authorObj)
 	println()
 
+	// check equality of two struct
+	copyAuthorObj := authorObj
+	fmt.Println("Author created using copy : ", copyAuthorObj)
+	fmt.Println("Is actual & copy author equal ? ", (authorObj == copyAuthorObj))
+
+	copyAuthorObjUsingPointer := &copyAuthorObj
+	copyAuthorObj.FirstName = "Change Firstname"
+
+	fmt.Println("[After change in copy object]Is actual & copy author equal ? ", (authorObj == copyAuthorObj))
+	fmt.Println("Is copy & pointer copy author equal ? ", (*copyAuthorObjUsingPointer == copyAuthorObj))
+	println()
+
 	anonymousAuthor := struct {
 		id        string
 		firstName string
