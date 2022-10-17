@@ -14,8 +14,10 @@ func GoRoutine(module string) {
 		goroutine.NoSync()
 	} else if strings.EqualFold(module, "Mutex") {
 		goroutine.SyncWithMutex()
-	} else if strings.EqualFold(module, "ChannelBasic") {
-		goroutine.ChannelBasic()
+	} else if strings.EqualFold(module, "Channels") {
+		goroutine.Channels()
+	} else if strings.EqualFold(module, "ProducerConsumer") {
+		goroutine.ProducerConsumerExampleWithbackPressure()
 	} else {
 		err := errors.New("routine example not found")
 		log.Fatal(err)
